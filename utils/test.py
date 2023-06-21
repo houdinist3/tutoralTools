@@ -1,17 +1,19 @@
-import os
-from shutil import copyfile
-from distutils.dir_util import copy_tree
-import tarfile
-import zipfile
-import glob
-from PySide2 import QtCore, QtGui, QtWidgets
+# import os
+# from shutil import copyfile
+# from distutils.dir_util import copy_tree
+# import tarfile
+# import zipfile
+# import glob
+# from PySide2 import QtCore, QtGui, QtWidgets
 
-QtWidgets.QWidget
+# QtWidgets.QWidget
 
 
-newDir = "D:/Git_Repo/tutoralTools/dir1/dir2"
-exportDir = "D:/Git_Repo/tutoralTools/export"
-usdDir = "D:/HOUDINI_RND/environment_USD/usd/usd_examples"
+# newDir = "D:/Git_Repo/tutoralTools/dir1/dir2"
+# exportDir = "D:/Git_Repo/tutoralTools/export"
+# usdDir = "D:/HOUDINI_RND/environment_USD/usd/usd_examples"
+
+print("hello maya")
 # eg1
 # if not os.path.exists(newDir):
 #     os.makedirs(newDir)
@@ -52,3 +54,9 @@ usdDir = "D:/HOUDINI_RND/environment_USD/usd/usd_examples"
 #         for data in usd:
 #             tar.add(data, arcname=os.path.basename(data))
 #     tar.close()
+
+
+path = "fsdf.obj"
+newPath = path.replace(".obj", "._reobj")
+a = "test" + newPath
+print(a)

@@ -9,18 +9,18 @@ def printIt():
 
 # printIt 함수를 정의합니다. 이 함수는 현재 시간을 출력합니다.
 
-delay = datetime(2023, 5, 26, 20, 56)
+# delay = datetime(2023, 5, 26, 20, 56)
 
-# 2023년 5월 26일 20시 56분을 delay 변수에 할당합니다.
+# # 2023년 5월 26일 20시 56분을 delay 변수에 할당합니다.
 
-while datetime.now() < delay:
-    time.sleep(5)
+# while datetime.now() < delay:
+#     time.sleep(5)
 
-# 현재 시간이 delay보다 작을 때까지 5초씩 대기합니다.
+# # 현재 시간이 delay보다 작을 때까지 5초씩 대기합니다.
 
-print("now start", time.ctime())
+# print("now start", time.ctime())
 
-# "now start"와 현재 시간을 출력합니다.
+# # "now start"와 현재 시간을 출력합니다.
 
 timeUtils.repeatIt(4, printIt, 5)
 

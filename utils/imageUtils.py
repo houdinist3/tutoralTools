@@ -23,6 +23,25 @@ def convertToRat(images, origType, newType):
         os.system(cmd)
 
 
+
+def createProxy(inDir, destDir, fileType):
+    for dr in os.listdir(inDir):
+        currentDir = os.path.join(inDir, dr)
+        if os.path.isdir(currentDir):
+            newDir = os.path.join(destDir, os.path.basename(currentDir) + '_proxy')
+            if not os.path.exists(newDir):
+                os.mkdir(newDir)
+                
+            for img in osUtils.getFileOfType(currentDir, fileType):
+                image = Image.open(img)
+                size = image.size
+                image.thumbnail((size[0]/2, size[1]/2))
+                image.save(img.replace(currentDir, newDir))
+                
+                
+    
+    
+    
 # imageDir = "D:/HOUDINI_RND/RND/xyz__batchtexconvert_examples/examples/example_images/example_image_batch_1"
 # images = osUtils.getFileOfType(imageDir, "*jpg")
 # print(images)
