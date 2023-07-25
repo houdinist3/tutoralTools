@@ -1,7 +1,8 @@
 import platform, os, os.path
 
 
-houdini_binPath = "C:/Program Files/Side Effects Software/Houdini 19.5.368/bin"
+
+houdini_binPath = "/opt/hfs19.5/bin"
 
 
 def getBinary(binary):
@@ -42,7 +43,8 @@ def getBinary(binary):
     # binary executable string
     binary_string = root + binary_folder + executable
     # print(binary_string)
-    return binary_string
+    # return binary_string
+    print(binary_string)
 
 
-# getBinary("iconvert")
+getBinary("iconvert")
