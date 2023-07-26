@@ -1,5 +1,5 @@
 import imageUtils
-import osUtils
+import osutils
 import sys
 import os
 
@@ -9,5 +9,7 @@ def main(imageDir):
         print("no dirctory provided")
         return
 
-    images = osUtils.getFileOfType(imageDir, "*jpg")
-    imageUtils.convertToRat(images)
+    images = osutils.getFileOfType(imageDir, "*exr")
+    # imageUtils.convertToRat(images, 'exr', 'rat')
+    imageUtils.convertToImaketx(images, 'exr', 'rat')
+main(sys.argv[-1])

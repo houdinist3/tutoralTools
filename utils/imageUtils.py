@@ -14,14 +14,26 @@ def convertImage(images, convertFrom, convertTo):
         im.save(newImage)
 
 
+def converToTex(images):
+    """convert to tex"""
+    for image in images:
+        # txMakeStr = 
+        pass
+
+
 def convertToRat(images, origType, newType):
     for image in images:
         iconvert = binary.getBinary("iconvert")
-        # cmd = "start {}".format(txMakeStr)
-        cmd = '"{}" {} {}'.format(iconvert, image, image.replace(origType, newType))
-        print(cmd)
+        cmd = '{} {} {}'.format(iconvert, image, image.replace(origType, newType))
         os.system(cmd)
 
+def convertToImaketx(images,origType,newType):
+
+# imaketx -v -m ocio --format RAT `@directory`/`@filename``@extension` `@directory`/`@filename`.rat
+    for image in images:
+        imaketx = binary.getBinary("imaketx")
+        cmd = '{} -v -m ocio --format RAT {} {}'.format(imaketx, image, image.replace(origType, newType))
+        os.system(cmd)
 
 
 def createProxy(inDir, destDir, fileType):
@@ -39,8 +51,7 @@ def createProxy(inDir, destDir, fileType):
                 image.save(img.replace(currentDir, newDir))
                 
                 
-    
-    
+
     
 # imageDir = "D:/HOUDINI_RND/RND/xyz__batchtexconvert_examples/examples/example_images/example_image_batch_1"
 # images = osUtils.getFileOfType(imageDir, "*jpg")

@@ -43,8 +43,8 @@ def getBinary(binary):
     # binary executable string
     binary_string = root + binary_folder + executable
     # print(binary_string)
-    # return binary_string
-    print(binary_string)
+    return binary_string
+    # print(binary_string)
 
 
 getBinary("iconvert")
