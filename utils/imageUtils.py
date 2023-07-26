@@ -1,6 +1,6 @@
 from PIL import Image
 import binary
-import osUtils
+import osutils
 import os
 
 # import OpenImageIO as oiio
@@ -32,7 +32,7 @@ def createProxy(inDir, destDir, fileType):
             if not os.path.exists(newDir):
                 os.mkdir(newDir)
                 
-            for img in osUtils.getFileOfType(currentDir, fileType):
+            for img in osutils.getFileOfType(currentDir, fileType):
                 image = Image.open(img)
                 size = image.size
                 image.thumbnail((size[0]/2, size[1]/2))
