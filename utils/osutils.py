@@ -13,6 +13,20 @@ def getFileOfType(destDir, fileType):
             files.append(y)
     return files
 
+
+def rename(dir, text, mode, replaceText=''):
+    for fil in os.listdir(dir):
+        fil = os.path.join(dir, fil)
+        fileName = os.path.basename(fil)
+
+        if mode == 'prepend':
+            newName = os.path.join(dir, fileName.replace(fileName, text + fileName))
+        elif mode == 'replace':
+            newName = os.path.join(dir, fileName.replace(text, replaceText))
+
+        os.rename(fil, newName)
+        
+
 # eg 1
 
 newDir = '/home/megatron/Documents/python/dir'
